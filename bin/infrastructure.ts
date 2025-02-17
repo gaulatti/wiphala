@@ -1,6 +1,17 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib';
 import { InfrastructureStack } from '../lib';
+import { config } from 'dotenv';
+
+/**
+ * Load environment variables from the .env file.
+ */
+config()
+
+/**
+ * Here we go.
+ * https://www.youtube.com/watch?v=sLkDZ3LhNZw
+ */
 
 const app = new cdk.App();
 new InfrastructureStack(app, 'Wiphala', {
