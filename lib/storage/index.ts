@@ -15,7 +15,14 @@ const createBuckets = (stack: Stack) => {
     bucketName: `${stack.stackName.toLowerCase()}-frontend`,
   });
 
-  return { frontendBucket };
+  /**
+   * Frontend Bucket
+   */
+  const assetsBucket = new Bucket(stack, `${stack.stackName}AssetsBucket`, {
+    bucketName: `${stack.stackName.toLowerCase()}-assets`,
+  });
+
+  return { frontendBucket, assetsBucket };
 };
 
 export { createBuckets };

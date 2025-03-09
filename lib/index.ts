@@ -24,7 +24,7 @@ export class InfrastructureStack extends cdk.Stack {
     /**
      * Create Buckets
      */
-    const { frontendBucket } = createBuckets(this);
+    const { frontendBucket, assetsBucket } = createBuckets(this);
 
     /**
      * Creates the permissions for the GitHub Actions autobuild.
